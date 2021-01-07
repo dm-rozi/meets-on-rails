@@ -5,7 +5,10 @@
 
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
+
+import 'bootstrap/dist/js/bootstrap'
 import '../styles/application'
+
 
 Rails.start()
 ActiveStorage.start()
