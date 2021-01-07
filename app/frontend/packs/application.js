@@ -3,14 +3,13 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import * as ActiveStorage from "@rails/activestorage"
+require("@rails/ujs").start();
 
+//add bootstrap
 import 'bootstrap/dist/js/bootstrap'
+
+//CSS
 import '../styles/application'
 
 
-Rails.start()
-ActiveStorage.start()
-
-const images = requare.context('../images', true)
+const images = require.context('../images', true);
