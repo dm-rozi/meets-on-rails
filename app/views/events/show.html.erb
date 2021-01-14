@@ -15,18 +15,45 @@
           </div>
 
       <% if current_user_can_edit?(@event) %>
-				<div class="buffer-both buffer-right">
-					<div class="btn-toolbar">
+				<div class="buffer-both ">
+					<!-- <div class="btn-toolbar"> -->
 				  	<%= link_to 'Изменить', edit_event_path(@event),
-				  		class: 'btn btn-primary' %>
+				  		class: 'btn btn-primary buffer-right' %>
 				 		<%= link_to 'Удалить', event_path(@event),
 				 								method: :delete,
                         data: {confirm: t('are_you_sure')},
 				 								class: 'btn btn-danger' %>
-					</div>
+				<!-- 	</div> -->
 				</div>
 			<% end %>
 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="event-comments buffer-top">
+        <div class="buffer-both">
+          <%= render partial: 'comments/comment', collection: @event.comments %>  
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="event-owner">
+        <h4>Зовет:</h4>
+        <p><%= render partial: 'users/user', object: @event.user %></p>
+      </div>
+      <div class="event-subscriptions">
+        <h4>Пойдут:</h4>
+        <div>
+          <p>
+            <%= render(
+                    partial: 'subscriptions/subscription', 
+                    collection: @event.subscriptions
+                ) %>
+          </p>
         </div>
       </div>
     </div>
