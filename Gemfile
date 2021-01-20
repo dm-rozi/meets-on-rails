@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 gem 'rails', '~> 6.1.0'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
@@ -27,6 +26,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :test do
