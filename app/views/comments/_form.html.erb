@@ -3,13 +3,13 @@
 
   <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control' %>
+    <%= f.text_area :body, class: 'form-control ' %>
   </div>
 
   <% unless user_signed_in? %>
     <div class="form_group">
       <%= f.label :user_name %>
-      <%= f.text_area :user_name, class: 'form-control' %>
+      <%= f.text_area :user_name, class: 'form-control form-control-sm' %>
     </div>
   <% end %>
 
