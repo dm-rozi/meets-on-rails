@@ -14,6 +14,9 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      subscription:
+        user_name: 'Ваше Имя'
+        user_email: 'Email'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -38,4 +41,7 @@ ru:
     sign_up: 'Регистрация'
     sign_in: 'Вход'
     sign_out: 'Выйти'
-    account: 'Профиль' 
+    account: 'Профиль'
+    dublicate_email: 
+  errors:
+    dublicate_email: 'уже используется'
